@@ -1,7 +1,6 @@
-# wordpress-vagrant
-Wordpress or PHP vagrant setup
+# Wordpress or PHP vagrant setup
 
-Vagrant Box:
+## Vagrant Box:
 Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
 Apache2
 PHP5
@@ -10,12 +9,31 @@ phpMyAdmin
 Vim
 xDebug
 
-Simple setup for wordpress sites. 
-Just add a public folder with a wordpress install. 
-Add a db folder.
-Uncomment the sql script in provision.sh.
-Run vagrant up
+add the following to your hostfile:
+```
+192.168.33.58 www.dev.wordpressproject.com
+```
+### wordpress:
 
-Comment out the sql script. Your db will be saved in the db folder.
+* u: admin
+* p: 12345
+
+### db:
+
+* u: root
+* p: root
+* table: test
+
+## Running the Vagrant Box
+
+You may need to run the following before starting the vagrant box:
+```
+vagrant box add avenuefactory/lamp
+```
+```
+vagrant plugin install vagrant-triggers
+```
+
+Vagrant destroy will dump the sql tables into create_tables.sql saving them for later use.
 
 .idea files are for PHPStorm. 
