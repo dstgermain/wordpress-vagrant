@@ -1,5 +1,7 @@
 # Wordpress or PHP vagrant setup
 
+Comes with starter theme and wp-config, you’ll need to download wordpress and add everything other than the wp-content and the wp-config to the public folder.
+
 ## Vagrant Box:
 Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
 Apache2
